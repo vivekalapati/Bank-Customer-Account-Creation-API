@@ -1,0 +1,14 @@
+
+http:
+  port: "8081"
+  
+db: 
+ sfc:
+   accountname: "HSRZFQK-NJ89159"
+   warehouse: "COMPUTE_WH"
+   database: "VIVEK"
+   schema: "BFS"
+   user: "ALAPATIVIVEK"
+   role: "ACCOUNTADMIN"
+   private key file path: "C:/mulesoft/bank-customer-acc-creation-api/src/main/resources/rsa_key.p8"
+  

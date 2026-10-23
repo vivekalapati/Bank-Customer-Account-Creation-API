@@ -1,0 +1,66 @@
+#%RAML 1.0
+title: bank-customer-acc-creation
+version: v1
+
+protocols:
+  - HTTPS
+  - HTTP
+
+/createAccount:
+  post:
+    queryParameters:
+      customerName:
+        type: string
+        required: true
+        minLength: 4
+        maxLength: 45
+
+      bank:
+        type: string
+        required: true
+        enum:
+          - Axis
+          - HDFC
+          - SBI
+          - ICICI
+
+      type:
+        type: string
+        required: true
+        enum:
+          - savings
+          - current
+
+      BranchName:
+        type: string
+        required: true
+        minLength: 4
+        maxLength: 10
+
+    body:
+      application/json:
+        type: !include Datatype/inputdatatype.raml
+        example: !include examples/request/inputRequestExample.raml
+
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include examples/response/successresponse.raml
+                  
+
+          
+                    
+        
+
+
+
+
+  
+        
+                  
+           
+
+
+
+          
